@@ -1,0 +1,12 @@
+<div class="student-page" *ngIf="student$ | async as students">
+  <section>
+    <form [formGroup]="searchForm">
+      <app-universal-input placeholder='მოძებნე სტუდენტი' formControlName="search"/>
+    </form>
+
+    <div class="student-page-row">
+      <button mat-stroked-button color="primary" (click)="openAddStudentModal()">სტუდენტის დამატება</button>
+    </div>
+  </section>
+  <app-universal-table [dataSource]="students" (clickEdit)="openEditStudentModal($event)"/>
+</div>

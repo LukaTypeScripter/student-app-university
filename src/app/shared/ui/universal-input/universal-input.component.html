@@ -1,0 +1,10 @@
+<mat-form-field appearance="fill" class="full-width">
+  <input
+    matInput
+    [placeholder]="placeholder"
+    [type]="type"
+    [value]="value"
+    (input)="handleInput($event)"
+    (blur)="onTouched()"
+  />
+</mat-form-field>
