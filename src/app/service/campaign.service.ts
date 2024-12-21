@@ -33,7 +33,7 @@ export class CampaignService {
     return this.http.put<any>(`${this.apiUrl}/${id}`, student);
   }
 
-  deleteStudent(id: string): Observable<any> {
+  deleteStudent(id: number): Observable<any> {
     return this.http.delete<any>(`${this.apiUrl}/${id}`);
   }
 }
